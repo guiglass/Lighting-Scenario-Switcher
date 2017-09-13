@@ -1,19 +1,16 @@
 # Lighting Scenario Switcher for Unity 3D - Beta 1.0
 ### Change Lightmaps, Lightprobes, Real-Time Lights, Lens Flares And Materials From Pre-Saved Profiles.
 
-This is a tool I built so I could switch the global lighting scenario of my scene in real-time. It allows the user to generate lightmaps and setup the lighting, then stor all the required information in a resources directory to be loaded at runtime.
+I built this tool so I could dynamically change the global lighting scenario for the entire scene at runtime. It allows the user to first generate lightmaps and setup the scene lighting elements, it then coplies and stores the required files in a resources directory so they can be loaded at any time by calling a simple script and specifying the directory to load from.
 
 **Video:**
-_An example and tutorial video on how to use this tool:_
+
+_An example and tutorial video on how to use the tool:_
 
 [![Youtube Video](https://img.youtube.com/vi/Ewt97OM19Wg/0.jpg)](https://www.youtube.com/watch?v=Ewt97OM19Wg)
 
 
 
-
-
-
-Something to consider when it come to lighting is that you may want to manage the Culling Masks for lights and make sure your main world’s lights do not include the HUD layer (especially the Directional Lights and area lamps). Additionally you can add lighting to you HUD layer by setting the lamp’s Culling Mask to only HUD layer.
 
 Please feel free to use this example in any way you see fit (without restriction of any kind) as well as redistribute, modify and share it with all of your friends and co-workers.
 
