@@ -3,6 +3,8 @@
 
 I built this tool so I could dynamically change the global lighting scenario for the entire scene at runtime. It allows the user to first generate lightmaps and setup the scene lighting elements, it then coplies and stores the required files in a resources directory so they can be loaded at any time by calling a simple script and specifying the directory to load from.
 
+_NOTE: Static Batching - I found that if I enable Project Settings>Player>Static Batching then the lightmap takes on different offsets at runtime causing misalignment. I have disabled static batching in my project, If I figure out how to compensate for the batch offsets I will update the example with a fix._
+
 **Video:**
 
 _An example and tutorial video on how to use the tool:_
