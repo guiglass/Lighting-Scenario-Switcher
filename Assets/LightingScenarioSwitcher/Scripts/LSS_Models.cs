@@ -14,7 +14,7 @@ namespace LSS
 		public class SphericalHarmonicsModel {
 			public float[] coefficients = new float[27];
 		}
-		//public SphericalHarmonicsModel sphericalHarmonicsInfo;
+
 
 		//
 		// Scene GameObject Model:
@@ -23,20 +23,14 @@ namespace LSS
 		public class GameObjectModel : BaseModel, ModelsInterface { // Scene Lights Info
 
 			public object GetComponentObject() {
-				return LSS_UID.allGuids[GetUniqueID()].GetComponent<GameObject>(); // Locate the scene object by UID and return the attached component of specified type.
-			}
-
-			public LightingScenarioModel UpdateEntry(LightingScenarioModel lightingScenarioModel) {
-				//List<GameObjectModel> infos =  new List<GameObjectModel>((ModelsInterface[])lightingScenarioModel.gameObjectInfos);
-				return lightingScenarioModel;
+				return LSS_UID.allGuids[GetUniqueID()].gameObject; // Locate the scene object by UID and return the attached component of specified type.
 			}
 
 			public void CustomFunction() {
-				LSS_UID.allGuids[uniqueId].GetComponent<LSS_GameObject>().SetComponentInfo (this); // Pass instance of class to the component class.
+				LSS_UID.allGuids[uniqueId].gameObject.GetComponent<LSS_GameObject>().SetComponentInfo (this); // Pass instance of class to the component class.
 			}
 
 			public bool enabled;               // Parameter Verbose Name: Enabled
-
 		}                                                                                     
 
 
@@ -47,16 +41,11 @@ namespace LSS
 		public class RendererModel : BaseModel, ModelsInterface  { // Renderers Lightmap Info.
 
 			public object GetComponentObject() {
-				return LSS_UID.allGuids[GetUniqueID()].GetComponent<MeshRenderer>(); // Locate the scene object by UID and return the attached component of specified type.
-			}
-
-			public LightingScenarioModel UpdateEntry(LightingScenarioModel lightingScenarioModel) {
-				//List<GameObjectModel> infos =  new List<GameObjectModel>((ModelsInterface[])lightingScenarioModel.gameObjectInfos);
-				return lightingScenarioModel;
+				return LSS_UID.allGuids[GetUniqueID()].gameObject.GetComponent<MeshRenderer>(); // Locate the scene object by UID and return the attached component of specified type.
 			}
 
 			public void CustomFunction() {
-				var obj = LSS_UID.allGuids[uniqueId].GetComponent<MeshRenderer>();
+				var obj = LSS_UID.allGuids[uniqueId].gameObject.GetComponent<MeshRenderer>();
 				obj.lightmapIndex = lightmapIndex;
 
 				if (!obj.isPartOfStaticBatch) {
@@ -69,7 +58,6 @@ namespace LSS
 
 			public int lightmapIndex;           // Parameter Verbose Name: LightMapIndex Color
 			public Vector4 lightmapOffsetScale; // Parameter Verbose Name: LightMapOffsetScale
-
 		}
 
 
@@ -80,23 +68,17 @@ namespace LSS
 		public class TerrainModel : BaseModel, ModelsInterface { // Terrain Lightmap Info
 
 			public object GetComponentObject() {
-				return LSS_UID.allGuids[GetUniqueID()].GetComponent<Terrain>(); // Locate the scene object by UID and return the attached component of specified type.
-			}
-
-			public LightingScenarioModel UpdateEntry(LightingScenarioModel lightingScenarioModel) {
-				//List<GameObjectModel> infos =  new List<GameObjectModel>((ModelsInterface[])lightingScenarioModel.gameObjectInfos);
-				return lightingScenarioModel;
+				return LSS_UID.allGuids[GetUniqueID()].gameObject.GetComponent<Terrain>(); // Locate the scene object by UID and return the attached component of specified type.
 			}
 
 			public void CustomFunction() {
-				var obj = LSS_UID.allGuids[uniqueId].GetComponent<Terrain>();
+				var obj = LSS_UID.allGuids[uniqueId].gameObject.GetComponent<Terrain>();
 				obj.lightmapIndex = lightmapIndex;
 				obj.lightmapScaleOffset = lightmapScaleOffset;
 			}
 
 			public int lightmapIndex;           // Parameter Verbose Name: LightMapIndex
 			public Vector4 lightmapScaleOffset; // Parameter Verbose Name: LightmapScaleOffset
-
 		}
 
 
@@ -107,16 +89,11 @@ namespace LSS
 		public class LightModel : BaseModel, ModelsInterface { // Scene Lights Info
 
 			public object GetComponentObject() {
-				return LSS_UID.allGuids[GetUniqueID()].GetComponent<Light>(); // Locate the scene object by UID and return the attached component of specified type.
-			}
-
-			public LightingScenarioModel UpdateEntry(LightingScenarioModel lightingScenarioModel) {
-				//List<GameObjectModel> infos =  new List<GameObjectModel>((ModelsInterface[])lightingScenarioModel.gameObjectInfos);
-				return lightingScenarioModel;
+				return LSS_UID.allGuids[GetUniqueID()].gameObject.GetComponent<Light>(); // Locate the scene object by UID and return the attached component of specified type.
 			}
 
 			public void CustomFunction() {
-				LSS_UID.allGuids[uniqueId].GetComponent<LSS_Light>().SetComponentInfo (this); // Pass instance of class to the component class.
+				LSS_UID.allGuids[uniqueId].gameObject.GetComponent<LSS_Light>().SetComponentInfo (this); // Pass instance of class to the component class.
 			}
 
 			public bool enabled;               // Parameter Verbose Name: Enabled
@@ -125,7 +102,6 @@ namespace LSS
 			public float shadowStrength;       // Parameter Verbose Name: ShadowStrength
 			public LightShadows shadows;       // Parameter Verbose Name: Shadows
 			public Vector4 color;              // Parameter Verbose Name: Color
-
 		}                                                                                     
 
 
@@ -136,16 +112,11 @@ namespace LSS
 		public class FlareModel : BaseModel, ModelsInterface { // Scene Lights Info
 
 			public object GetComponentObject() {
-				return LSS_UID.allGuids[GetUniqueID()].GetComponent<LensFlare>(); // Locate the scene object by UID and return the attached component of specified type.
-			}
-
-			public LightingScenarioModel UpdateEntry(LightingScenarioModel lightingScenarioModel) {
-				//List<GameObjectModel> infos =  new List<GameObjectModel>((ModelsInterface[])lightingScenarioModel.gameObjectInfos);
-				return lightingScenarioModel;
+				return LSS_UID.allGuids[GetUniqueID()].gameObject.GetComponent<LensFlare>(); // Locate the scene object by UID and return the attached component of specified type.
 			}
 
 			public void CustomFunction() {
-				LSS_UID.allGuids[uniqueId].GetComponent<LSS_LensFlare>().SetComponentInfo (this); // Pass instance of class to the component class.
+				LSS_UID.allGuids[uniqueId].gameObject.GetComponent<LSS_LensFlare>().SetComponentInfo (this); // Pass instance of class to the component class.
 			}
 
 			public bool enabled;               // Parameter Verbose Name: Enabled
@@ -153,8 +124,7 @@ namespace LSS
 			public float brightness;		   // Parameter Verbose Name: Brightness
 			public float fadeSpeed;            // Parameter Verbose Name: FadeSpeed
 		}                                                                             
-
-
+			
 
 		//
 		// JSON File Model:
@@ -184,7 +154,6 @@ namespace LSS
 		// Interface for common functions
 		//
 		public interface ModelsInterface { // When ApplySceneInfo runs through all the arrays it will have an interface for each model "type".
-			LightingScenarioModel UpdateEntry(LightingScenarioModel lightingScenarioModel);
 			string GetUniqueID(); // used for looking up the attached gameobject in the scene regardless of Unity's InstanceID.
 			object GetComponentObject(); // Get just the object refrence (for checking if an entry was null regardless of type, or just grabbing a generic reference).
 			void CustomFunction(); // The function that specifies what to do with the deserialized data from the from the lighting scenarios JSON file.

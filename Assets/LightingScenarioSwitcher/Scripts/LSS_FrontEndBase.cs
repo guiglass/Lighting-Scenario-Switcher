@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.IO;
 
 #if UNITY_EDITOR
-using System.IO;
+
 using UnityEditor;
 #endif
 
@@ -285,6 +286,10 @@ namespace LSS
 		public void WriteJsonFile (LSS_Models.LightingScenarioModel lightingScenariosData, string path) {
 			File.WriteAllText (path + m_jsonFileName, JsonUtility.ToJson(lightingScenariosData)); // Write all the data to the file.
 		}
+
+		public bool CheckLightingScenarioValidForScene (LSS_Models.LightingScenarioModel scenario) {
+			return scenario.uid == GetOrCreateUniqueID(gameObject); // Given the deserialized and loaded JSON data (as LightingScenarioData), check if the uid field matches the UniqueID attached to this gameobject (if they match then that JSON file was built by this script in this scene).
+		}
 		#endif
 
 
@@ -299,9 +304,7 @@ namespace LSS
 			}
 		}
 
-		public bool CheckLightingScenarioValidForScene (LSS_Models.LightingScenarioModel scenario) {
-			return scenario.uid == GetOrCreateUniqueID(gameObject); // Given the deserialized and loaded JSON data (as LightingScenarioData), check if the uid field matches the UniqueID attached to this gameobject (if they match then that JSON file was built by this script in this scene).
-		}
+
 
 		public string GetJsonResourcePath (string f) { //Expects just the file name without the extention, and will return the path to the resource from the currently set m_resourceFolder
 			string baseName = f.Substring(0, f.Length - Path.GetExtension(f).Length);
@@ -309,7 +312,7 @@ namespace LSS
 		}
 
 		public LSS_Models.LightingScenarioModel LoadJsonFile () {
-			AssetDatabase.Refresh (); // Refresh so any json files can be found and loaded.
+			
 			string json = Resources.Load (GetJsonResourcePath (m_jsonFileName)).ToString();
 			return JsonUtility.FromJson<LSS_Models.LightingScenarioModel> (json);
 		}

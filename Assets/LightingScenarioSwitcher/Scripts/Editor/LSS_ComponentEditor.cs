@@ -40,6 +40,7 @@ namespace LSS_Components
 							    "Cancel")) {
 							return;
 						}
+						AssetDatabase.Refresh (); // Refresh so any json files can be found and loaded.
 						targetObject.UpdateComponentInfos (scenariosManager.LoadJsonFile (), true);
 					}
 				}

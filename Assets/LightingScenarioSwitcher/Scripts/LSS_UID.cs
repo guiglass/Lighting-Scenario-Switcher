@@ -32,6 +32,8 @@ namespace LSS
 	[ExecuteInEditMode]
 	public class LSS_UID : MonoBehaviour {
 		
+		bool allowRecreate = false;
+
 		// global lookup of IDs to Components - we can esnure at edit time that no two 
 		// components which are loaded at the same time have the same ID. 
 		public static Dictionary<string, LSS_UID> allGuids = new Dictionary<string, LSS_UID> ();
@@ -41,13 +43,25 @@ namespace LSS
 		[HideInInspector]
 		public string m_uniqueId;		
 
-		public static int managerInstanceID;
+		public static GameObject managerInstance;
 		//public static int managerInstanceID { get { return m_managerInstanceID; }}
 
 		[SerializeField]
 		private List<string> m_searchTags;
 		public List<string> searchTags { get { return m_searchTags; } }
-
+		public void OnSearchTagChange () {
+			var tags = new List<string> (); // Tags from all LSS_UID components.
+			foreach (KeyValuePair<string,LSS_UID> uid in LSS_UID.allGuids) {
+				try {
+					foreach (string tag in m_searchTags) {
+						if (!searchTags.Contains (tag)) {
+							searchTags.Add (tag);
+						}
+					}
+				} catch {}
+			}
+		}
+			
 		public void DestroyLightingScenarioComponent () { //Called using message whenever the scene wants to remove everything!
 			StartCoroutine (WaitOnDestroy ());
 		}
@@ -64,38 +78,23 @@ namespace LSS
 			}
 			return false;
 		}
-			
-		public void OnSearchTagChange () {
-			var tags = new List<string> (); // Tags from all LSS_UID components.
-			foreach (KeyValuePair<string,LSS_UID> uid in LSS_UID.allGuids) {
-				try {
-					foreach (string tag in m_searchTags) {
-						if (!searchTags.Contains (tag)) {
-							searchTags.Add (tag);
-						}
-					}
-				} catch {}
-			}
-		}
 
 
 		public void Awake () {
 			GenerateUniqueID ();
 			SetManagerInstanceID ();
 		}
+
 		public void SetManagerInstanceID () {
 			if (GetComponent<LSS_FrontEnd> ()) {
-				managerInstanceID = GetComponent<LSS_FrontEnd> ().gameObject.GetInstanceID ();
+				managerInstance = GetComponent<LSS_FrontEnd> ().gameObject;
 			}
 		}
+
 		public void OnLevelWasLoaded () {
 			SetManagerInstanceID ();
 			allowRecreate = true;
 		}
-
-
-
-
 
 
 		// Only compile the code in an editor build
@@ -120,8 +119,8 @@ namespace LSS
 			var go = new GameObject();
 			go.AddComponent<LSS_FrontEnd> ();
 			go.name = "LightingScenariosSwitcher";
-			managerInstanceID = go.GetInstanceID ();
-			Selection.instanceIDs = new int[] { managerInstanceID };
+			managerInstance = go;
+			Selection.instanceIDs = new int[] { managerInstance.GetInstanceID () };
 		}
 
 		// When we get destroyed (which happens when unloading a level)
@@ -142,6 +141,8 @@ namespace LSS
 		#endif
 
 		public string GenerateUniqueID () {
+			
+			#if UNITY_EDITOR
 			// Construct the name of the scene with an underscore to prefix to the Guid
 			string sceneName = gameObject.scene.name + "_";
 
@@ -162,6 +163,7 @@ namespace LSS
 				EditorUtility.SetDirty (this);
 				EditorSceneManager.MarkSceneDirty (gameObject.scene);
 			}
+			#endif
 
 			// We can be sure that the key is unique - now make sure we have it in our list
 			if (!allGuids.ContainsKey (m_uniqueId)) {
@@ -169,34 +171,12 @@ namespace LSS
 			} 
 			return m_uniqueId;
 		}
-
-
-
-
-		private float m_LastEditorUpdateTime;
-		protected virtual void OnEnable()
-		{
-			m_LastEditorUpdateTime = Time.realtimeSinceStartup;
-			EditorApplication.update += OnEditorUpdate;
-		}
-
-
-		protected virtual void OnEditorUpdate()
-		{
-			//GenerateUniqueID ();
-			//Debug.Log ("Editor");
-			// In here you can check the current realtime, see if a certain
-			// amount of time has elapsed, and perform some task.
-		}
-
-
-
-
-		bool allowRecreate = false;
+			
 		public virtual void OnDestroy () {
 			allGuids.Remove(m_uniqueId);
-			EditorApplication.update -= OnEditorUpdate;
-			//RecreateIfComponentsExist (); // Warn the user that synced components are still connected to this object.
+			#if UNITY_EDITOR
+			RecreateIfComponentsExist (); // Warn the user that synced components are still connected to this object.
+			#endif
 		}
 	
 	}

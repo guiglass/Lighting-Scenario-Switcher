@@ -19,9 +19,7 @@ namespace LSS
 			GUIStyle customLabel;
 			GUIStyle customButton;
 
-			GameObject scenariosManager = (GameObject)EditorUtility.InstanceIDToObject(LSS_UID.managerInstanceID);
-
-			if (isScenariosManager || scenariosManager != null) {
+			if (isScenariosManager || LSS_UID.managerInstance != null) {
 
 				if (isScenariosManager) {
 					EditorGUILayout.Space ();
@@ -50,7 +48,7 @@ namespace LSS
 					customButton.fontSize = 12;
 					customButton.fontStyle = FontStyle.Bold;
 					if (GUILayout.Button ("LIGHTING SCENARIO MANAGER", customButton)) {
-						Selection.instanceIDs = new int[] { scenariosManager.GetInstanceID () };
+						Selection.instanceIDs = new int[] { LSS_UID.managerInstance.GetInstanceID () };
 					}
 				}
 
@@ -126,7 +124,7 @@ namespace LSS
 				EditorGUILayout.Space ();
 
 			}
-			if (!isScenariosManager && scenariosManager != null ) {
+			if (!isScenariosManager && LSS_UID.managerInstance != null ) {
 				base.OnInspectorGUI ();
 			}
 		}

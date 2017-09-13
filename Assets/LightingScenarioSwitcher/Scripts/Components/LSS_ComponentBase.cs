@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 using LSS;
 
 namespace LSS_Components
@@ -14,7 +13,7 @@ namespace LSS_Components
 
 		public LSS_FrontEnd GetScenariosManager () {
 			try {
-				return ((GameObject)EditorUtility.InstanceIDToObject (LSS_UID.managerInstanceID)).GetComponent<LSS_FrontEnd> ();
+				return LSS_UID.managerInstance.GetComponent<LSS_FrontEnd> ();
 			} catch {
 				return null;
 			}
@@ -77,7 +76,8 @@ namespace LSS_Components
 			} 
 			return uid;
 		}
-			
+		#endif
+
 		// The Overrides
 		public virtual object GetComponentInfo () {
 			Debug.LogWarning ("Attempted to run a non-overridden (empty) superclass: " + this.GetType());
@@ -88,6 +88,6 @@ namespace LSS_Components
 			Debug.LogWarning ("Attempted to run a non-overridden (empty) superclass: " + this.GetType());
 			return -1;
 		}
-		#endif
+
 	}
 }

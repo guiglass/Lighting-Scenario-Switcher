@@ -50,8 +50,9 @@ namespace LSS
 			lightingScenariosData = LoadJsonFile ();
 
 			//The JSON file was " + lightingScenariosData == null ? " null or not present!"
+			#if UNITY_EDITOR
 			if (!CheckLightingScenarioValidForScene(lightingScenariosData)) {
-				#if UNITY_EDITOR
+
 				int option = EditorUtility.DisplayDialogComplex (
 					"JSON File Not Valid For Scene!",
 					"The file about to be loaded has wrong unique ID for this scene.", 
@@ -70,10 +71,9 @@ namespace LSS
 					WriteJsonFile (lightingScenariosData, GetResourcesStorageDirectory());
 					break;
 				}
-				#else
-				Debug.LogError ("JSON File Not Valid For Scene!");
-				#endif
+
 			}
+			#endif
 
 			var newLightmaps = new LightmapData[lightingScenariosData.lightmaps.Length];
 			for (int i = 0; i < newLightmaps.Length; i++) {

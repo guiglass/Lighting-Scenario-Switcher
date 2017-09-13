@@ -11755,7 +11755,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 398133924}
-  m_CurrentCamera: {fileID: 398133924}
+  m_CurrentCamera: {fileID: 0}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: 0.13
   m_SpotFar: 1
@@ -11950,7 +11950,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0.28676468, b: 0.28676468, a: 1}
+  m_Color: {r: 0.17387548, g: 0.24662316, b: 0.9852941, a: 1}
   m_Intensity: 1
   m_Range: 2
   m_SpotAngle: 30
@@ -46996,7 +46996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1814506297
 Transform:
   m_ObjectHideFlags: 0
@@ -64661,7 +64661,7 @@ MonoBehaviour:
   m_ShadowmapMode: 0
   m_Cameras:
   - {fileID: 398133924}
-  m_CurrentCamera: {fileID: 398133924}
+  m_CurrentCamera: {fileID: 0}
   m_Size: {x: 10, y: 10, z: 20}
   m_SpotNear: 0.13
   m_SpotFar: 1
