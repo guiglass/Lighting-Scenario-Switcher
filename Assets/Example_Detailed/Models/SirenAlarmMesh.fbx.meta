@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: f58fffcb97e795740b5ecd06899a73b6
+timeCreated: 1504679423
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: BezierCircle
+    100002: BezierCurve
+    100004: Circle
+    100006: Cube
+    100008: Cube.001
+    100010: Cube.002
+    100012: Cylinder
+    100014: Cylinder.001
+    100016: Cylinder.002
+    100018: Cylinder.003
+    100020: Cylinder.004
+    100022: Cylinder.005
+    100024: //RootNode
+    100026: Sphere
+    100028: Cube.003
+    100030: Cube.004
+    100032: Cylinder.006
+    100034: Cylinder.007
+    100036: Cylinder.008
+    100038: Cylinder.009
+    100040: Hemi
+    100042: HighVolt.001
+    100044: HighVolt.002
+    100046: Sphere.001
+    400000: BezierCircle
+    400002: BezierCurve
+    400004: Circle
+    400006: Cube
+    400008: Cube.001
+    400010: Cube.002
+    400012: Cylinder
+    400014: Cylinder.001
+    400016: Cylinder.002
+    400018: Cylinder.003
+    400020: Cylinder.004
+    400022: Cylinder.005
+    400024: //RootNode
+    400026: Sphere
+    400028: Cube.003
+    400030: Cube.004
+    400032: Cylinder.006
+    400034: Cylinder.007
+    400036: Cylinder.008
+    400038: Cylinder.009
+    400040: Hemi
+    400042: HighVolt.001
+    400044: HighVolt.002
+    400046: Sphere.001
+    2300000: BezierCircle
+    2300002: BezierCurve
+    2300004: Circle
+    2300006: Cube
+    2300008: Cube.001
+    2300010: Cube.002
+    2300012: Cylinder
+    2300014: Cylinder.001
+    2300016: Cylinder.002
+    2300018: Cylinder.003
+    2300020: Cylinder.004
+    2300022: Cylinder.005
+    2300024: Sphere
+    2300026: Cube.003
+    2300028: Cube.004
+    2300030: Cylinder.006
+    2300032: Cylinder.007
+    2300034: Cylinder.008
+    2300036: Cylinder.009
+    2300038: HighVolt.001
+    2300040: HighVolt.002
+    2300042: Sphere.001
+    3300000: BezierCircle
+    3300002: BezierCurve
+    3300004: Circle
+    3300006: Cube
+    3300008: Cube.001
+    3300010: Cube.002
+    3300012: Cylinder
+    3300014: Cylinder.001
+    3300016: Cylinder.002
+    3300018: Cylinder.003
+    3300020: Cylinder.004
+    3300022: Cylinder.005
+    3300024: Sphere
+    3300026: Cube.003
+    3300028: Cube.004
+    3300030: Cylinder.006
+    3300032: Cylinder.007
+    3300034: Cylinder.008
+    3300036: Cylinder.009
+    3300038: HighVolt.001
+    3300040: HighVolt.002
+    3300042: Sphere.001
+    4300000: BezierCircle
+    4300002: BezierCurve
+    4300004: Cylinder.003
+    4300006: Cylinder.005
+    4300008: Cube.002
+    4300010: Cylinder.004
+    4300012: Cube.001
+    4300014: Cylinder.002
+    4300016: Cylinder.001
+    4300018: Sphere
+    4300020: Circle
+    4300022: Cylinder
+    4300024: Cube
+    4300026: Cylinder.008
+    4300028: Sphere.001
+    4300030: Cylinder.009
+    4300032: Cube.004
+    4300034: Cylinder.007
+    4300036: Cylinder.006
+    4300038: Cube.003
+    4300040: HighVolt.001
+    4300042: HighVolt.002
+    10800000: Hemi
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: 502818c95c5a39c4589d71c3bf8e6e7b
+timeCreated: 1504684917
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Circle
+    100002: Circle.001
+    100004: Circle.002
+    100006: Circle.003
+    100008: Cylinder
+    100010: Cylinder.002
+    100012: grill hori
+    100014: grill vert
+    100016: knob spin Empty.001
+    100018: Plane
+    100020: saddle
+    100022: Sphere
+    100024: Sphere.001
+    100026: //RootNode
+    100028: Circle.004
+    100030: Circle.005
+    100032: Circle.006
+    100034: Circle.007
+    100036: Circle.008
+    100038: Circle.009
+    100040: Circle.021
+    100042: Cylinder.001
+    100044: Cylinder.003
+    100046: grill hori.001
+    100048: grill vert.001
+    100050: knob spin Empty.000
+    100052: Plane.001
+    100054: saddle.001
+    100056: Sphere.003
+    400000: Circle
+    400002: Circle.001
+    400004: Circle.002
+    400006: Circle.003
+    400008: Cylinder
+    400010: Cylinder.002
+    400012: grill hori
+    400014: grill vert
+    400016: knob spin Empty.001
+    400018: Plane
+    400020: saddle
+    400022: Sphere
+    400024: Sphere.001
+    400026: //RootNode
+    400028: Circle.004
+    400030: Circle.005
+    400032: Circle.006
+    400034: Circle.007
+    400036: Circle.008
+    400038: Circle.009
+    400040: Circle.021
+    400042: Cylinder.001
+    400044: Cylinder.003
+    400046: grill hori.001
+    400048: grill vert.001
+    400050: knob spin Empty.000
+    400052: Plane.001
+    400054: saddle.001
+    400056: Sphere.003
+    2300000: Circle
+    2300002: Circle.001
+    2300004: Circle.002
+    2300006: Circle.003
+    2300008: Cylinder
+    2300010: Cylinder.002
+    2300012: grill hori
+    2300014: grill vert
+    2300016: Plane
+    2300018: saddle
+    2300020: Sphere
+    2300022: Sphere.001
+    2300024: Circle.004
+    2300026: Circle.005
+    2300028: Circle.006
+    2300030: Circle.007
+    2300032: Circle.008
+    2300034: Circle.009
+    2300036: Circle.021
+    2300038: Cylinder.001
+    2300040: Cylinder.003
+    2300042: grill hori.001
+    2300044: grill vert.001
+    2300046: Plane.001
+    2300048: saddle.001
+    2300050: Sphere.003
+    3300000: Circle
+    3300002: Circle.001
+    3300004: Circle.002
+    3300006: Circle.003
+    3300008: Cylinder
+    3300010: Cylinder.002
+    3300012: grill hori
+    3300014: grill vert
+    3300016: Plane
+    3300018: saddle
+    3300020: Sphere
+    3300022: Sphere.001
+    3300024: Circle.004
+    3300026: Circle.005
+    3300028: Circle.006
+    3300030: Circle.007
+    3300032: Circle.008
+    3300034: Circle.009
+    3300036: Circle.021
+    3300038: Cylinder.001
+    3300040: Cylinder.003
+    3300042: grill hori.001
+    3300044: grill vert.001
+    3300046: Plane.001
+    3300048: saddle.001
+    3300050: Sphere.003
+    4300000: Cylinder.002
+    4300002: saddle
+    4300004: Circle.003
+    4300006: grill vert
+    4300008: grill hori
+    4300010: Sphere.001
+    4300012: Circle.002
+    4300014: Circle.001
+    4300016: Sphere
+    4300018: Circle
+    4300020: Plane
+    4300022: Cylinder
+    4300024: saddle.001
+    4300026: Cylinder.003
+    4300028: Plane.001
+    4300030: Circle.009
+    4300032: Sphere.003
+    4300034: Circle.008
+    4300036: Circle.007
+    4300038: grill hori.001
+    4300040: grill vert.001
+    4300042: Circle.006
+    4300044: Cylinder.001
+    4300046: Circle.021
+    4300048: Circle.005
+    4300050: Circle.004
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
